@@ -1,0 +1,32 @@
+name: coloring_sdk
+description: "A new Flutter module project."
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  coloring_api:
+    path: packages/coloring_api
+  flutter_drawing_board:
+    path: packages/fork/flutter_drawing_board
+  cupertino_icons: ^1.0.8
+  flutter_colorpicker: ^1.1.0
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  module:
+    androidX: true
+    androidPackage: com.example.coloring_sdk
+    iosBundleIdentifier: com.example.coloringSdk

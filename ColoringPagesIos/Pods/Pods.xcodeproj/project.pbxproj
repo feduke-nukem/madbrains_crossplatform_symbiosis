@@ -1,0 +1,1170 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B26E11467D023FA6CDCE36F75198812F /* Build configuration list for PBXAggregateTarget "Flutter" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = Flutter;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0EA082A492521321E8A85F2FE2D3BF84 /* ColoringApiPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E098E3C412023B948AB5EE304C84A /* ColoringApiPlugin.swift */; };
+		146109EF07C8B8392A7BCEE70488975A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		280A6DB14112A7D62853897069053BBE /* GeneratedPluginRegistrant.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF5AA2418DE08461C847E4611782B5B /* GeneratedPluginRegistrant.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F50B81E769A08D2EC83D6ACD4155EB9 /* ColoringSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ADEDBB3137037AAED64B7E4C0CC093 /* ColoringSdk.swift */; };
+		3405CE260C94B4EBE497EAF023D0B217 /* FlutterPluginRegistrant-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C82E3CA081962CE7BF88BF901564E05 /* FlutterPluginRegistrant-dummy.m */; };
+		35C62B00B9559CA2EEE314C26A71D650 /* coloring_api-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96F7D878BB5470379ED16BFE2797559D /* coloring_api-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61A5618751364C5B5E5902C0C0743257 /* FlutterPluginRegistrant-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08685D1174880C71E6AE25328FA579FE /* FlutterPluginRegistrant-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D90DD1EBE64083162065F4009D9DF43 /* Pods-ColoringPagesIos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5981126818F5B4D7A52C1FEA4626E9 /* Pods-ColoringPagesIos-dummy.m */; };
+		71EE48A1B6D644C87AC014F0EF056107 /* Pods-ColoringPagesIos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C87E44AD8AE449B745C871FD3B16BC /* Pods-ColoringPagesIos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7971D9BF70F26E729F439D0AF234D931 /* coloring_api-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D623E0A12FBC7795BCE126C3FBF1A3 /* coloring_api-dummy.m */; };
+		A9EF0ECD19D7A642ADD23F598D812FCF /* api.g.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93A1B13C9079BEB50CFD16A07A09723 /* api.g.swift */; };
+		CD4B6320C0912C397D3387231840D8AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E1A72E4E588C9C20CBA577865D47DF8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		EE78951E965202220151D68A0F170747 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 875E5E48E0DF734021253D223A6AAAD6 /* GeneratedPluginRegistrant.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16CB9B77668A748036C16BAFA38FD34B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83DAA8F43D74F8D51203DE23C7C3A3F5;
+			remoteInfo = FlutterPluginRegistrant;
+		};
+		205B1DA9DD7D77EEE22C738C82E7EE47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A84E2C33F7D97D7BB04963840AACB6D8;
+			remoteInfo = coloring_api;
+		};
+		427D71FB3AFDC807A664F555E8520F5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
+			remoteInfo = Flutter;
+		};
+		8E34F1A40067DAE6A3BFD6323E2EBC20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A84E2C33F7D97D7BB04963840AACB6D8;
+			remoteInfo = coloring_api;
+		};
+		9A98EDB5B74B9F01CA4B2B2B11B1647B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
+			remoteInfo = Flutter;
+		};
+		F8083B6476E5E2AC864E5A42D041189B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
+			remoteInfo = Flutter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08685D1174880C71E6AE25328FA579FE /* FlutterPluginRegistrant-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlutterPluginRegistrant-umbrella.h"; sourceTree = "<group>"; };
+		0C21AA7C47273C167358888206468981 /* Pods-ColoringPagesIos-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ColoringPagesIos-acknowledgements.markdown"; sourceTree = "<group>"; };
+		108CF4A612A02CBBE412A3C930F1C325 /* Pods-ColoringPagesIos-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ColoringPagesIos-frameworks.sh"; sourceTree = "<group>"; };
+		13869C99455B4AFE1D9592085A6F726B /* Flutter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Flutter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		17A9F4E154D1E03A14075C8E5A9738C4 /* FlutterPluginRegistrant-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlutterPluginRegistrant-prefix.pch"; sourceTree = "<group>"; };
+		1D81DC09CCDCF99CF2D8FD77A3653AE6 /* FlutterPluginRegistrant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlutterPluginRegistrant.release.xcconfig; sourceTree = "<group>"; };
+		2D5981126818F5B4D7A52C1FEA4626E9 /* Pods-ColoringPagesIos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ColoringPagesIos-dummy.m"; sourceTree = "<group>"; };
+		2D6E2B1752728B62B195C27818DF51A3 /* coloring_api.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = coloring_api.debug.xcconfig; sourceTree = "<group>"; };
+		352289B59494DC04B4E0F7D8841F7CA3 /* Flutter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.release.xcconfig; sourceTree = "<group>"; };
+		355D696A6350A80A5B1922CB61891DAF /* FlutterPluginRegistrant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlutterPluginRegistrant.debug.xcconfig; sourceTree = "<group>"; };
+		38FBD6A314040548279A40A5565C4E9A /* coloring_api-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "coloring_api-prefix.pch"; sourceTree = "<group>"; };
+		4666E4006E9CBC40A18163CCEE519DF9 /* Pods-ColoringPagesIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ColoringPagesIos.release.xcconfig"; sourceTree = "<group>"; };
+		536626385B30ABA5F092EB512798E8EA /* Pods-ColoringPagesIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ColoringPagesIos.debug.xcconfig"; sourceTree = "<group>"; };
+		557EA5EDA8007E0FE5C00326898E9E27 /* coloring_api */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = coloring_api; path = coloring_api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CDB8EAFFE486EC83E4B83A240984111 /* Flutter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.debug.xcconfig; sourceTree = "<group>"; };
+		618EB4C2AC3EAA3941A9F9E7743E5354 /* Pods-ColoringPagesIos-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ColoringPagesIos-acknowledgements.plist"; sourceTree = "<group>"; };
+		6273EFC640E7D66FC499A75174C4DDC2 /* FlutterPluginRegistrant-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FlutterPluginRegistrant-Info.plist"; sourceTree = "<group>"; };
+		6547C88F600B662CB22BBF8D25D85EB3 /* coloring_api.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = coloring_api.podspec; path = ../../../../../packages/coloring_api/ios/coloring_api.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		66D623E0A12FBC7795BCE126C3FBF1A3 /* coloring_api-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "coloring_api-dummy.m"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		875E5E48E0DF734021253D223A6AAAD6 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GeneratedPluginRegistrant.m; path = Classes/GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
+		8AA2AEC2BFF677D3C11D2350CEF4BAD5 /* coloring_api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = coloring_api.release.xcconfig; sourceTree = "<group>"; };
+		8C82E3CA081962CE7BF88BF901564E05 /* FlutterPluginRegistrant-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlutterPluginRegistrant-dummy.m"; sourceTree = "<group>"; };
+		8E5A796CF1A6EFBF86993E07656BE050 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		96F7D878BB5470379ED16BFE2797559D /* coloring_api-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "coloring_api-umbrella.h"; sourceTree = "<group>"; };
+		9D3F78A20B824EC7AB6B3AC0A848975C /* FlutterPluginRegistrant.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FlutterPluginRegistrant.modulemap; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3FA9A015880D16117A97637FEBED967 /* Pods-ColoringPagesIos */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ColoringPagesIos"; path = Pods_ColoringPagesIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B77CDDE5C6ACD862F7E94E7EF92B22 /* Pods-ColoringPagesIos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ColoringPagesIos.modulemap"; sourceTree = "<group>"; };
+		BE4D822CE5F3910F69DD2BA8927F6BB2 /* coloring_api-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "coloring_api-Info.plist"; sourceTree = "<group>"; };
+		C5A6170BDEBC9BC00EFCAF42D98121AB /* FlutterPluginRegistrant.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FlutterPluginRegistrant.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C5C87E44AD8AE449B745C871FD3B16BC /* Pods-ColoringPagesIos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ColoringPagesIos-umbrella.h"; sourceTree = "<group>"; };
+		D0AF63945E3A4474A46FC74CF81A541D /* coloring_api.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = coloring_api.modulemap; sourceTree = "<group>"; };
+		D58E098E3C412023B948AB5EE304C84A /* ColoringApiPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColoringApiPlugin.swift; path = ../../../../../../packages/coloring_api/ios/Classes/ColoringApiPlugin.swift; sourceTree = "<group>"; };
+		D93D31B41552D732BEF9E5648E52F044 /* Pods-ColoringPagesIos-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ColoringPagesIos-Info.plist"; sourceTree = "<group>"; };
+		DAF5AA2418DE08461C847E4611782B5B /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeneratedPluginRegistrant.h; path = Classes/GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
+		DF7C6EBB9161EEF650EC12B4BB67E628 /* FlutterPluginRegistrant */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FlutterPluginRegistrant; path = FlutterPluginRegistrant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6ADEDBB3137037AAED64B7E4C0CC093 /* ColoringSdk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColoringSdk.swift; path = ../../../../../../packages/coloring_api/ios/Classes/ColoringSdk.swift; sourceTree = "<group>"; };
+		F93A1B13C9079BEB50CFD16A07A09723 /* api.g.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = api.g.swift; path = ../../../../../../packages/coloring_api/ios/Classes/api.g.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EE6E2BCA34F5CCB78D7B6C81E40AC8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4B6320C0912C397D3387231840D8AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D54A8FC1BA8CEBB008A1D994B06213F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146109EF07C8B8392A7BCEE70488975A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9815CB72567A24CB924381D9AC01C99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1A72E4E588C9C20CBA577865D47DF8A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DAD49FFD107134D982A8F239DDC516A /* coloring_api */ = {
+			isa = PBXGroup;
+			children = (
+				AF93C119E4174B1D6350399B405C9ACD /* ios */,
+			);
+			name = coloring_api;
+			path = coloring_api;
+			sourceTree = "<group>";
+		};
+		0F3B7CEDD06D605970A972D034AAECF2 /* .ios */ = {
+			isa = PBXGroup;
+			children = (
+				EF3371F00FB425EF180CA44FE00CEABE /* .symlinks */,
+			);
+			name = .ios;
+			path = .ios;
+			sourceTree = "<group>";
+		};
+		278D35E9A78E1C22D8356AB9A37F4D7C /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				6D14DFF22C8A1777AEC377716D443E52 /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		30E38115DEF8CE08256593A262C34E11 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				13869C99455B4AFE1D9592085A6F726B /* Flutter.podspec */,
+				8E5A796CF1A6EFBF86993E07656BE050 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		31BAE71248CCC76BD3233F3DB3DA7A84 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D3F78A20B824EC7AB6B3AC0A848975C /* FlutterPluginRegistrant.modulemap */,
+				8C82E3CA081962CE7BF88BF901564E05 /* FlutterPluginRegistrant-dummy.m */,
+				6273EFC640E7D66FC499A75174C4DDC2 /* FlutterPluginRegistrant-Info.plist */,
+				17A9F4E154D1E03A14075C8E5A9738C4 /* FlutterPluginRegistrant-prefix.pch */,
+				08685D1174880C71E6AE25328FA579FE /* FlutterPluginRegistrant-umbrella.h */,
+				355D696A6350A80A5B1922CB61891DAF /* FlutterPluginRegistrant.debug.xcconfig */,
+				1D81DC09CCDCF99CF2D8FD77A3653AE6 /* FlutterPluginRegistrant.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../../ColoringPagesIos/Pods/Target Support Files/FlutterPluginRegistrant";
+			sourceTree = "<group>";
+		};
+		3F51C74BFC1693644C83EA0B9A81CBDA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E707F0028B153139425E40EB40B3BAF /* Pods-ColoringPagesIos */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4B87709085DAACFE6504EBA72068C3E9 /* FlutterPluginRegistrant */ = {
+			isa = PBXGroup;
+			children = (
+				DAF5AA2418DE08461C847E4611782B5B /* GeneratedPluginRegistrant.h */,
+				875E5E48E0DF734021253D223A6AAAD6 /* GeneratedPluginRegistrant.m */,
+				F8129A26700229D7D1D86BB8C6646952 /* Pod */,
+				31BAE71248CCC76BD3233F3DB3DA7A84 /* Support Files */,
+			);
+			name = FlutterPluginRegistrant;
+			path = ../../coloring_sdk/.ios/Flutter/FlutterPluginRegistrant;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5B7F7FA18124DF00DBFF3B04D2DF5D8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				557EA5EDA8007E0FE5C00326898E9E27 /* coloring_api */,
+				DF7C6EBB9161EEF650EC12B4BB67E628 /* FlutterPluginRegistrant */,
+				A3FA9A015880D16117A97637FEBED967 /* Pods-ColoringPagesIos */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D73709F3F2D1B12DEC63EDE0AAFE1E9 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				823A1B2719CFC9EB94D7EDD98404F44B /* coloring_api */,
+				F7FB1897C42179A903E165CE645DDB24 /* Flutter */,
+				4B87709085DAACFE6504EBA72068C3E9 /* FlutterPluginRegistrant */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		6D14DFF22C8A1777AEC377716D443E52 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				EFE82CD66B7EF78E5BEB3E61C480D5D5 /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7FA57AA93C43C2F3CE0A843B90BAB455 /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				0DAD49FFD107134D982A8F239DDC516A /* coloring_api */,
+			);
+			name = plugins;
+			path = plugins;
+			sourceTree = "<group>";
+		};
+		823A1B2719CFC9EB94D7EDD98404F44B /* coloring_api */ = {
+			isa = PBXGroup;
+			children = (
+				8410660D58A2338BB299031463469EDB /* .. */,
+				88C1C3E38A0AF7215917E04C1EE237C7 /* Pod */,
+				BEA7429100840E59FA1D4A4BCFDC67AD /* Support Files */,
+			);
+			name = coloring_api;
+			path = ../../coloring_sdk/.ios/.symlinks/plugins/coloring_api/ios;
+			sourceTree = "<group>";
+		};
+		8410660D58A2338BB299031463469EDB /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				278D35E9A78E1C22D8356AB9A37F4D7C /* .. */,
+			);
+			name = ..;
+			path = ../../../../../packages/coloring_api/ios;
+			sourceTree = "<group>";
+		};
+		88C1C3E38A0AF7215917E04C1EE237C7 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6547C88F600B662CB22BBF8D25D85EB3 /* coloring_api.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		8E707F0028B153139425E40EB40B3BAF /* Pods-ColoringPagesIos */ = {
+			isa = PBXGroup;
+			children = (
+				A7B77CDDE5C6ACD862F7E94E7EF92B22 /* Pods-ColoringPagesIos.modulemap */,
+				0C21AA7C47273C167358888206468981 /* Pods-ColoringPagesIos-acknowledgements.markdown */,
+				618EB4C2AC3EAA3941A9F9E7743E5354 /* Pods-ColoringPagesIos-acknowledgements.plist */,
+				2D5981126818F5B4D7A52C1FEA4626E9 /* Pods-ColoringPagesIos-dummy.m */,
+				108CF4A612A02CBBE412A3C930F1C325 /* Pods-ColoringPagesIos-frameworks.sh */,
+				D93D31B41552D732BEF9E5648E52F044 /* Pods-ColoringPagesIos-Info.plist */,
+				C5C87E44AD8AE449B745C871FD3B16BC /* Pods-ColoringPagesIos-umbrella.h */,
+				536626385B30ABA5F092EB512798E8EA /* Pods-ColoringPagesIos.debug.xcconfig */,
+				4666E4006E9CBC40A18163CCEE519DF9 /* Pods-ColoringPagesIos.release.xcconfig */,
+			);
+			name = "Pods-ColoringPagesIos";
+			path = "Target Support Files/Pods-ColoringPagesIos";
+			sourceTree = "<group>";
+		};
+		AF93C119E4174B1D6350399B405C9ACD /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				F48D8D615799891012BF8E187449A168 /* Classes */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		BEA7429100840E59FA1D4A4BCFDC67AD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0AF63945E3A4474A46FC74CF81A541D /* coloring_api.modulemap */,
+				66D623E0A12FBC7795BCE126C3FBF1A3 /* coloring_api-dummy.m */,
+				BE4D822CE5F3910F69DD2BA8927F6BB2 /* coloring_api-Info.plist */,
+				38FBD6A314040548279A40A5565C4E9A /* coloring_api-prefix.pch */,
+				96F7D878BB5470379ED16BFE2797559D /* coloring_api-umbrella.h */,
+				2D6E2B1752728B62B195C27818DF51A3 /* coloring_api.debug.xcconfig */,
+				8AA2AEC2BFF677D3C11D2350CEF4BAD5 /* coloring_api.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../../../../ColoringPagesIos/Pods/Target Support Files/coloring_api";
+			sourceTree = "<group>";
+		};
+		C94156B5CDCCDB899561FCAF61AE26CD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CDB8EAFFE486EC83E4B83A240984111 /* Flutter.debug.xcconfig */,
+				352289B59494DC04B4E0F7D8841F7CA3 /* Flutter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../ColoringPagesIos/Pods/Target Support Files/Flutter";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				5D73709F3F2D1B12DEC63EDE0AAFE1E9 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				5B7F7FA18124DF00DBFF3B04D2DF5D8D /* Products */,
+				3F51C74BFC1693644C83EA0B9A81CBDA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF3371F00FB425EF180CA44FE00CEABE /* .symlinks */ = {
+			isa = PBXGroup;
+			children = (
+				7FA57AA93C43C2F3CE0A843B90BAB455 /* plugins */,
+			);
+			name = .symlinks;
+			path = .symlinks;
+			sourceTree = "<group>";
+		};
+		EFE82CD66B7EF78E5BEB3E61C480D5D5 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				0F3B7CEDD06D605970A972D034AAECF2 /* .ios */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F48D8D615799891012BF8E187449A168 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F93A1B13C9079BEB50CFD16A07A09723 /* api.g.swift */,
+				D58E098E3C412023B948AB5EE304C84A /* ColoringApiPlugin.swift */,
+				E6ADEDBB3137037AAED64B7E4C0CC093 /* ColoringSdk.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F7FB1897C42179A903E165CE645DDB24 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				30E38115DEF8CE08256593A262C34E11 /* Pod */,
+				C94156B5CDCCDB899561FCAF61AE26CD /* Support Files */,
+			);
+			name = Flutter;
+			path = ../../coloring_sdk/.ios/Flutter;
+			sourceTree = "<group>";
+		};
+		F8129A26700229D7D1D86BB8C6646952 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C5A6170BDEBC9BC00EFCAF42D98121AB /* FlutterPluginRegistrant.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2ED37DA7404567D7D8D8D71E57E6B974 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35C62B00B9559CA2EEE314C26A71D650 /* coloring_api-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B333C66696BFBCD7B0B934C0A5442B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61A5618751364C5B5E5902C0C0743257 /* FlutterPluginRegistrant-umbrella.h in Headers */,
+				280A6DB14112A7D62853897069053BBE /* GeneratedPluginRegistrant.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D5973690BB60579FA0FFCBFA093249 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71EE48A1B6D644C87AC014F0EF056107 /* Pods-ColoringPagesIos-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4F64746B085B35C4468481B4B5B245BC /* Pods-ColoringPagesIos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D605FD36E19B2EBE4A9B2A2ECF4974 /* Build configuration list for PBXNativeTarget "Pods-ColoringPagesIos" */;
+			buildPhases = (
+				F6D5973690BB60579FA0FFCBFA093249 /* Headers */,
+				212EECDDA2B1CFCB91E6C2F747D4F9F2 /* Sources */,
+				D9815CB72567A24CB924381D9AC01C99 /* Frameworks */,
+				60026F5BDF6310110969296C9D43B907 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18CD180D3FD50B21E3B25B6DEAD64E80 /* PBXTargetDependency */,
+				A2263752DA76200AAD55B0885F566DF7 /* PBXTargetDependency */,
+				89218A87D2B32DBB2E3C7490DE964C7D /* PBXTargetDependency */,
+			);
+			name = "Pods-ColoringPagesIos";
+			productName = Pods_ColoringPagesIos;
+			productReference = A3FA9A015880D16117A97637FEBED967 /* Pods-ColoringPagesIos */;
+			productType = "com.apple.product-type.framework";
+		};
+		83DAA8F43D74F8D51203DE23C7C3A3F5 /* FlutterPluginRegistrant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B4E773554F952A9CC0FDBFEBC1A1B66 /* Build configuration list for PBXNativeTarget "FlutterPluginRegistrant" */;
+			buildPhases = (
+				8B333C66696BFBCD7B0B934C0A5442B4 /* Headers */,
+				9DAE81075769A82CE6A3F0F482FF3277 /* Sources */,
+				D54A8FC1BA8CEBB008A1D994B06213F5 /* Frameworks */,
+				45415A1F1F8EB15E9A883DDF0A23FD2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE2EBB00338561E0C2AFC9EA93051D1C /* PBXTargetDependency */,
+				102174550B3332038C72A8BA17D717DE /* PBXTargetDependency */,
+			);
+			name = FlutterPluginRegistrant;
+			productName = FlutterPluginRegistrant;
+			productReference = DF7C6EBB9161EEF650EC12B4BB67E628 /* FlutterPluginRegistrant */;
+			productType = "com.apple.product-type.framework";
+		};
+		A84E2C33F7D97D7BB04963840AACB6D8 /* coloring_api */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36907141C7177A33AEE60CAF8EA6E61E /* Build configuration list for PBXNativeTarget "coloring_api" */;
+			buildPhases = (
+				2ED37DA7404567D7D8D8D71E57E6B974 /* Headers */,
+				A5606AC563B116812D1E6CF28FF69D71 /* Sources */,
+				3EE6E2BCA34F5CCB78D7B6C81E40AC8D /* Frameworks */,
+				46D496B5FB40EA5A91C8713E133C5263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9CC3217DEB60368F85A103201646271 /* PBXTargetDependency */,
+			);
+			name = coloring_api;
+			productName = coloring_api;
+			productReference = 557EA5EDA8007E0FE5C00326898E9E27 /* coloring_api */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 5B7F7FA18124DF00DBFF3B04D2DF5D8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A84E2C33F7D97D7BB04963840AACB6D8 /* coloring_api */,
+				1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */,
+				83DAA8F43D74F8D51203DE23C7C3A3F5 /* FlutterPluginRegistrant */,
+				4F64746B085B35C4468481B4B5B245BC /* Pods-ColoringPagesIos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45415A1F1F8EB15E9A883DDF0A23FD2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46D496B5FB40EA5A91C8713E133C5263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60026F5BDF6310110969296C9D43B907 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		212EECDDA2B1CFCB91E6C2F747D4F9F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D90DD1EBE64083162065F4009D9DF43 /* Pods-ColoringPagesIos-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DAE81075769A82CE6A3F0F482FF3277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3405CE260C94B4EBE497EAF023D0B217 /* FlutterPluginRegistrant-dummy.m in Sources */,
+				EE78951E965202220151D68A0F170747 /* GeneratedPluginRegistrant.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5606AC563B116812D1E6CF28FF69D71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9EF0ECD19D7A642ADD23F598D812FCF /* api.g.swift in Sources */,
+				7971D9BF70F26E729F439D0AF234D931 /* coloring_api-dummy.m in Sources */,
+				0EA082A492521321E8A85F2FE2D3BF84 /* ColoringApiPlugin.swift in Sources */,
+				2F50B81E769A08D2EC83D6ACD4155EB9 /* ColoringSdk.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		102174550B3332038C72A8BA17D717DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = coloring_api;
+			target = A84E2C33F7D97D7BB04963840AACB6D8 /* coloring_api */;
+			targetProxy = 8E34F1A40067DAE6A3BFD6323E2EBC20 /* PBXContainerItemProxy */;
+		};
+		18CD180D3FD50B21E3B25B6DEAD64E80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flutter;
+			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
+			targetProxy = F8083B6476E5E2AC864E5A42D041189B /* PBXContainerItemProxy */;
+		};
+		89218A87D2B32DBB2E3C7490DE964C7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = coloring_api;
+			target = A84E2C33F7D97D7BB04963840AACB6D8 /* coloring_api */;
+			targetProxy = 205B1DA9DD7D77EEE22C738C82E7EE47 /* PBXContainerItemProxy */;
+		};
+		A2263752DA76200AAD55B0885F566DF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FlutterPluginRegistrant;
+			target = 83DAA8F43D74F8D51203DE23C7C3A3F5 /* FlutterPluginRegistrant */;
+			targetProxy = 16CB9B77668A748036C16BAFA38FD34B /* PBXContainerItemProxy */;
+		};
+		AE2EBB00338561E0C2AFC9EA93051D1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flutter;
+			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
+			targetProxy = 9A98EDB5B74B9F01CA4B2B2B11B1647B /* PBXContainerItemProxy */;
+		};
+		D9CC3217DEB60368F85A103201646271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flutter;
+			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
+			targetProxy = 427D71FB3AFDC807A664F555E8520F5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1CD12639F4FD36076F2AA473883D3C08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 352289B59494DC04B4E0F7D8841F7CA3 /* Flutter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		37E252CB9530805DA8DE3E3F45A511F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AA2AEC2BFF677D3C11D2350CEF4BAD5 /* coloring_api.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/feduke-nukem/Desktop/git-projects/flutter/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/feduke-nukem/Desktop/git-projects/flutter/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/coloring_api/coloring_api-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/coloring_api/coloring_api-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/coloring_api/coloring_api.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = coloring_api;
+				PRODUCT_NAME = coloring_api;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		52F94F0656CDCEE8295D8D80F33EDBD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 355D696A6350A80A5B1922CB61891DAF /* FlutterPluginRegistrant.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/feduke-nukem/Desktop/git-projects/flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/feduke-nukem/Desktop/git-projects/flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/FlutterPluginRegistrant/FlutterPluginRegistrant-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FlutterPluginRegistrant/FlutterPluginRegistrant-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/FlutterPluginRegistrant/FlutterPluginRegistrant.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = FlutterPluginRegistrant;
+				PRODUCT_NAME = FlutterPluginRegistrant;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		55C2F387D702BB41797922467C104BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D81DC09CCDCF99CF2D8FD77A3653AE6 /* FlutterPluginRegistrant.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/feduke-nukem/Desktop/git-projects/flutter/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/feduke-nukem/Desktop/git-projects/flutter/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/FlutterPluginRegistrant/FlutterPluginRegistrant-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FlutterPluginRegistrant/FlutterPluginRegistrant-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/FlutterPluginRegistrant/FlutterPluginRegistrant.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = FlutterPluginRegistrant;
+				PRODUCT_NAME = FlutterPluginRegistrant;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5E9F66B17C0A41173713F5ACCAF3CB99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4666E4006E9CBC40A18163CCEE519DF9 /* Pods-ColoringPagesIos.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/feduke-nukem/Desktop/git-projects/flutter/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/feduke-nukem/Desktop/git-projects/flutter/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Target Support Files/Pods-ColoringPagesIos/Pods-ColoringPagesIos-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ColoringPagesIos/Pods-ColoringPagesIos.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C09FE905682BBB411D9AB5BC6B672DBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 536626385B30ABA5F092EB512798E8EA /* Pods-ColoringPagesIos.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/feduke-nukem/Desktop/git-projects/flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/feduke-nukem/Desktop/git-projects/flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Target Support Files/Pods-ColoringPagesIos/Pods-ColoringPagesIos-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ColoringPagesIos/Pods-ColoringPagesIos.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D9844D06C57EBFF461393CE1E97A6DAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D6E2B1752728B62B195C27818DF51A3 /* coloring_api.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/feduke-nukem/Desktop/git-projects/flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/feduke-nukem/Desktop/git-projects/flutter/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/coloring_api/coloring_api-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/coloring_api/coloring_api-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/coloring_api/coloring_api.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = coloring_api;
+				PRODUCT_NAME = coloring_api;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F4FF6A0D1970CA9705974E3CB2134802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F85AC00A1B278B90DFBF48B404FAC6A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CDB8EAFFE486EC83E4B83A240984111 /* Flutter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B4E773554F952A9CC0FDBFEBC1A1B66 /* Build configuration list for PBXNativeTarget "FlutterPluginRegistrant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52F94F0656CDCEE8295D8D80F33EDBD6 /* Debug */,
+				55C2F387D702BB41797922467C104BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36907141C7177A33AEE60CAF8EA6E61E /* Build configuration list for PBXNativeTarget "coloring_api" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9844D06C57EBFF461393CE1E97A6DAE /* Debug */,
+				37E252CB9530805DA8DE3E3F45A511F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4FF6A0D1970CA9705974E3CB2134802 /* Debug */,
+				30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B26E11467D023FA6CDCE36F75198812F /* Build configuration list for PBXAggregateTarget "Flutter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85AC00A1B278B90DFBF48B404FAC6A8 /* Debug */,
+				1CD12639F4FD36076F2AA473883D3C08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D605FD36E19B2EBE4A9B2A2ECF4974 /* Build configuration list for PBXNativeTarget "Pods-ColoringPagesIos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C09FE905682BBB411D9AB5BC6B672DBC /* Debug */,
+				5E9F66B17C0A41173713F5ACCAF3CB99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

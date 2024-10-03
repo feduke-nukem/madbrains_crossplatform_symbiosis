@@ -1,0 +1,6 @@
+setBinding(new Binding ([gradle: this]))
+evaluate(new File (settingsDir.parentFile, './coloring_sdk/.android/include_flutter.groovy'))
+
+// add other module dependencies
+include(":coloring_api")
+project(":coloring_api").projectDir = new File(settingsDir.parentFile, "./coloring_sdk/packages/coloring_api/android")

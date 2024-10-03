@@ -1,0 +1,29 @@
+PODS:
+  - coloring_api (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - FlutterPluginRegistrant (0.0.1):
+    - coloring_api
+    - Flutter
+
+DEPENDENCIES:
+  - coloring_api (from `../coloring_sdk/.ios/.symlinks/plugins/coloring_api/ios`)
+  - Flutter (from `../coloring_sdk/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `../coloring_sdk/.ios/Flutter/FlutterPluginRegistrant`)
+
+EXTERNAL SOURCES:
+  coloring_api:
+    :path: "../coloring_sdk/.ios/.symlinks/plugins/coloring_api/ios"
+  Flutter:
+    :path: "../coloring_sdk/.ios/Flutter"
+  FlutterPluginRegistrant:
+    :path: "../coloring_sdk/.ios/Flutter/FlutterPluginRegistrant"
+
+SPEC CHECKSUMS:
+  coloring_api: a0a5039b800e43adb007cfad08bbe50034714282
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  FlutterPluginRegistrant: 9ef7262eef0cc4952301666f4a36254e4eaeb2cd
+
+PODFILE CHECKSUM: 2789009060b55a0709d5efa0feaa2d88d2773c45
+
+COCOAPODS: 1.15.2
