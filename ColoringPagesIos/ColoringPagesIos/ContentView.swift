@@ -9,15 +9,21 @@ import coloring_api
 import Flutter
 import SwiftUI
 
+let attackOnTitan = "AttackOnTitan"
+let chadShrek = "ChadShrek"
+let spawn = "Spawn"
+let spiderMan = "SpiderMan"
+let hellBoy = "HellBoy"
+
 // MARK: - LocalImagesList
 
 struct LocalImagesList: View {
     let images: [String] = [
-        "AttackOnTitan",
-        "ChadShrek",
-        "Spawn",
-        "SpiderMan",
-        "HellBoy",
+        attackOnTitan,
+        chadShrek,
+        spawn,
+        spiderMan,
+        hellBoy,
     ] // Image names in Assets folder
 
     let onAssetSelect: (String) -> Void
@@ -83,7 +89,7 @@ struct ContentView: View {
                         ),
                         configuration: ColoringSdkConfiguration(
                             image: FlutterStandardTypedData(bytes: image.pngData()!),
-                            initialColor: "#a30a0a",
+                            initialColor: initialColor(imageName: selectedImageName),
                             session: sessions[selectedImageName],
                             colorPresets: [
                                 "#ffffff",
@@ -100,7 +106,7 @@ struct ContentView: View {
                                 pickColorTooltip: "Pick your very own color!",
                                 colorPickerTitle: "Pick your color!",
                                 colorPickerPresetsTitle: "Available color presets",
-                                screenTitle: "Color this one!"
+                                screenTitle: screenTitle(imageName: selectedImageName)
                             ),
                             theme: ColoringSdkTheme(
                                 surface: "#FFFFFF",
@@ -111,6 +117,24 @@ struct ContentView: View {
                                     background: "#e1eaeb",
                                     foreground: "#000000"
                                 )
+                            ),
+                            featureToggle: ColoringSdkFeatureToggle(
+                                isColorPickerEnabled: true,
+                                isScaleEnabled: true,
+                                isPanEnabled: true,
+                                enabledTools: [
+                                    .circle,
+                                    .eraser,
+                                    .rectangle,
+                                    .straightLine,
+                                ],
+                                enabledActions: [
+                                    .strokeWidth,
+                                    .undo,
+                                    .redo,
+                                    .rotate,
+                                    .clear,
+                                ]
                             )
                         )
                     )
@@ -119,6 +143,30 @@ struct ContentView: View {
                     }
                 }
             }
+        }
+    }
+
+    func initialColor(imageName: String) -> String {
+        switch imageName {
+        case attackOnTitan: return "#c97979"
+        case chadShrek: return "8cc979"
+        case hellBoy: return "#a30a0a"
+        case spawn: return "#000000"
+        case spiderMan: return "#ff0000"
+        default:
+            return "#1900ff"
+        }
+    }
+
+    func screenTitle(imageName: String) -> String {
+        switch imageName {
+        case attackOnTitan: return "Eren Yeager"
+        case chadShrek: return "Shrek"
+        case hellBoy: return "Hellboy"
+        case spawn: return "Spawn"
+        case spiderMan: return "Spider-man"
+        default:
+            return "Color this one!"
         }
     }
 }

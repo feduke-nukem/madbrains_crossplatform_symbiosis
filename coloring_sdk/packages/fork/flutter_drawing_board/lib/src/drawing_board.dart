@@ -48,6 +48,7 @@ class DrawingBoard extends StatefulWidget {
     this.onInteractionUpdate,
     this.transformationController,
     this.alignment = Alignment.topCenter,
+    this.defaultActionsBuilder,
   });
 
   /// 画板背景控件
@@ -76,6 +77,9 @@ class DrawingBoard extends StatefulWidget {
 
   /// 默认工具栏构建器
   final DefaultToolsBuilder? defaultToolsBuilder;
+
+  final List<Widget> Function(BuildContext context, DrawConfig config)?
+      defaultActionsBuilder;
 
   /// 缩放板属性
   final Clip boardClipBehavior;
@@ -119,10 +123,6 @@ class DrawingBoard extends StatefulWidget {
           icon: CupertinoIcons.bandage,
           onTap: () => controller.setPaintContent(Eraser())),
     ];
-  }
-
-  static Widget buildDefaultActions(DrawingController controller) {
-    return _DrawingBoardState.buildDefaultActions(controller);
   }
 
   static Widget buildDefaultTools(DrawingController controller,
@@ -251,9 +251,9 @@ class _DrawingBoardState extends State<DrawingBoard> {
   }
 
   /// 构建默认操作栏
-  static Widget buildDefaultActions(DrawingController controller) {
+  Widget buildDefaultActions(DrawingController controller) {
     return Builder(builder: (BuildContext context) {
-      final theme = Theme.of(context);
+      final ThemeData theme = Theme.of(context);
       return Material(
         color: Theme.of(context).colorScheme.surfaceContainer,
         child: SingleChildScrollView(
@@ -263,42 +263,43 @@ class _DrawingBoardState extends State<DrawingBoard> {
               valueListenable: controller.drawConfig,
               builder: (_, DrawConfig dc, ___) {
                 return Row(
-                  children: <Widget>[
-                    SizedBox(
-                      height: 24,
-                      width: 160,
-                      child: Slider(
-                        thumbColor: theme.colorScheme.onSurface,
-                        activeColor: theme.colorScheme.secondary,
-                        value: dc.strokeWidth,
-                        max: 50,
-                        min: 1,
-                        onChanged: (double v) =>
-                            controller.setStyle(strokeWidth: v),
-                      ),
-                    ),
-                    IconButton(
-                      icon: Icon(
-                        CupertinoIcons.arrow_turn_up_left,
-                        color: controller.canUndo() ? null : Colors.grey,
-                      ),
-                      onPressed: () => controller.undo(),
-                    ),
-                    IconButton(
-                      icon: Icon(
-                        CupertinoIcons.arrow_turn_up_right,
-                        color: controller.canRedo() ? null : Colors.grey,
-                      ),
-                      onPressed: () => controller.redo(),
-                    ),
-                    IconButton(
-                        icon: const Icon(CupertinoIcons.rotate_right),
-                        onPressed: () => controller.turn()),
-                    IconButton(
-                      icon: const Icon(CupertinoIcons.trash),
-                      onPressed: () => controller.clear(),
-                    ),
-                  ],
+                  children: widget.defaultActionsBuilder?.call(context, dc) ??
+                      <Widget>[
+                        SizedBox(
+                          height: 24,
+                          width: 160,
+                          child: Slider(
+                            thumbColor: theme.colorScheme.onSurface,
+                            activeColor: theme.colorScheme.secondary,
+                            value: dc.strokeWidth,
+                            max: 50,
+                            min: 1,
+                            onChanged: (double v) =>
+                                controller.setStyle(strokeWidth: v),
+                          ),
+                        ),
+                        IconButton(
+                          icon: Icon(
+                            CupertinoIcons.arrow_turn_up_left,
+                            color: controller.canUndo() ? null : Colors.grey,
+                          ),
+                          onPressed: () => controller.undo(),
+                        ),
+                        IconButton(
+                          icon: Icon(
+                            CupertinoIcons.arrow_turn_up_right,
+                            color: controller.canRedo() ? null : Colors.grey,
+                          ),
+                          onPressed: () => controller.redo(),
+                        ),
+                        IconButton(
+                            icon: const Icon(CupertinoIcons.rotate_right),
+                            onPressed: () => controller.turn()),
+                        IconButton(
+                          icon: const Icon(CupertinoIcons.trash),
+                          onPressed: () => controller.clear(),
+                        ),
+                      ],
                 );
               }),
         ),

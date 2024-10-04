@@ -47,6 +47,33 @@ class FlutterError (
   val details: Any? = null
 ) : Throwable()
 
+enum class ColoringSdkTool(val raw: Int) {
+  STRAIGHT_LINE(0),
+  RECTANGLE(1),
+  CIRCLE(2),
+  ERASER(3);
+
+  companion object {
+    fun ofRaw(raw: Int): ColoringSdkTool? {
+      return values().firstOrNull { it.raw == raw }
+    }
+  }
+}
+
+enum class ColoringSdkAction(val raw: Int) {
+  STROKE_WIDTH(0),
+  UNDO(1),
+  REDO(2),
+  ROTATE(3),
+  CLEAR(4);
+
+  companion object {
+    fun ofRaw(raw: Int): ColoringSdkAction? {
+      return values().firstOrNull { it.raw == raw }
+    }
+  }
+}
+
 /** Generated class from Pigeon that represents data sent in messages. */
 data class ColoringSdkConfiguration (
   val image: ByteArray,
@@ -63,7 +90,8 @@ data class ColoringSdkConfiguration (
   /** Hex format. */
   val colorPresets: List<String>,
   val localizations: ColoringSdkLocalizations,
-  val theme: ColoringSdkTheme
+  val theme: ColoringSdkTheme,
+  val featureToggle: ColoringSdkFeatureToggle
 )
  {
   companion object {
@@ -74,7 +102,8 @@ data class ColoringSdkConfiguration (
       val colorPresets = pigeonVar_list[3] as List<String>
       val localizations = pigeonVar_list[4] as ColoringSdkLocalizations
       val theme = pigeonVar_list[5] as ColoringSdkTheme
-      return ColoringSdkConfiguration(image, initialColor, session, colorPresets, localizations, theme)
+      val featureToggle = pigeonVar_list[6] as ColoringSdkFeatureToggle
+      return ColoringSdkConfiguration(image, initialColor, session, colorPresets, localizations, theme, featureToggle)
     }
   }
   fun toList(): List<Any?> {
@@ -85,6 +114,7 @@ data class ColoringSdkConfiguration (
       colorPresets,
       localizations,
       theme,
+      featureToggle,
     )
   }
 }
@@ -178,27 +208,72 @@ data class ColoringSdkButtonTheme (
     )
   }
 }
+
+/** Generated class from Pigeon that represents data sent in messages. */
+data class ColoringSdkFeatureToggle (
+  val isColorPickerEnabled: Boolean,
+  val isScaleEnabled: Boolean,
+  val isPanEnabled: Boolean,
+  val enabledTools: List<ColoringSdkTool>,
+  val enabledActions: List<ColoringSdkAction>
+)
+ {
+  companion object {
+    fun fromList(pigeonVar_list: List<Any?>): ColoringSdkFeatureToggle {
+      val isColorPickerEnabled = pigeonVar_list[0] as Boolean
+      val isScaleEnabled = pigeonVar_list[1] as Boolean
+      val isPanEnabled = pigeonVar_list[2] as Boolean
+      val enabledTools = pigeonVar_list[3] as List<ColoringSdkTool>
+      val enabledActions = pigeonVar_list[4] as List<ColoringSdkAction>
+      return ColoringSdkFeatureToggle(isColorPickerEnabled, isScaleEnabled, isPanEnabled, enabledTools, enabledActions)
+    }
+  }
+  fun toList(): List<Any?> {
+    return listOf(
+      isColorPickerEnabled,
+      isScaleEnabled,
+      isPanEnabled,
+      enabledTools,
+      enabledActions,
+    )
+  }
+}
 private open class apiPigeonCodec : StandardMessageCodec() {
   override fun readValueOfType(type: Byte, buffer: ByteBuffer): Any? {
     return when (type) {
       129.toByte() -> {
-        return (readValue(buffer) as? List<Any?>)?.let {
-          ColoringSdkConfiguration.fromList(it)
+        return (readValue(buffer) as Long?)?.let {
+          ColoringSdkTool.ofRaw(it.toInt())
         }
       }
       130.toByte() -> {
-        return (readValue(buffer) as? List<Any?>)?.let {
-          ColoringSdkLocalizations.fromList(it)
+        return (readValue(buffer) as Long?)?.let {
+          ColoringSdkAction.ofRaw(it.toInt())
         }
       }
       131.toByte() -> {
         return (readValue(buffer) as? List<Any?>)?.let {
-          ColoringSdkTheme.fromList(it)
+          ColoringSdkConfiguration.fromList(it)
         }
       }
       132.toByte() -> {
         return (readValue(buffer) as? List<Any?>)?.let {
+          ColoringSdkLocalizations.fromList(it)
+        }
+      }
+      133.toByte() -> {
+        return (readValue(buffer) as? List<Any?>)?.let {
+          ColoringSdkTheme.fromList(it)
+        }
+      }
+      134.toByte() -> {
+        return (readValue(buffer) as? List<Any?>)?.let {
           ColoringSdkButtonTheme.fromList(it)
+        }
+      }
+      135.toByte() -> {
+        return (readValue(buffer) as? List<Any?>)?.let {
+          ColoringSdkFeatureToggle.fromList(it)
         }
       }
       else -> super.readValueOfType(type, buffer)
@@ -206,20 +281,32 @@ private open class apiPigeonCodec : StandardMessageCodec() {
   }
   override fun writeValue(stream: ByteArrayOutputStream, value: Any?)   {
     when (value) {
-      is ColoringSdkConfiguration -> {
+      is ColoringSdkTool -> {
         stream.write(129)
-        writeValue(stream, value.toList())
+        writeValue(stream, value.raw)
       }
-      is ColoringSdkLocalizations -> {
+      is ColoringSdkAction -> {
         stream.write(130)
-        writeValue(stream, value.toList())
+        writeValue(stream, value.raw)
       }
-      is ColoringSdkTheme -> {
+      is ColoringSdkConfiguration -> {
         stream.write(131)
         writeValue(stream, value.toList())
       }
-      is ColoringSdkButtonTheme -> {
+      is ColoringSdkLocalizations -> {
         stream.write(132)
+        writeValue(stream, value.toList())
+      }
+      is ColoringSdkTheme -> {
+        stream.write(133)
+        writeValue(stream, value.toList())
+      }
+      is ColoringSdkButtonTheme -> {
+        stream.write(134)
+        writeValue(stream, value.toList())
+      }
+      is ColoringSdkFeatureToggle -> {
+        stream.write(135)
         writeValue(stream, value.toList())
       }
       else -> super.writeValue(stream, value)

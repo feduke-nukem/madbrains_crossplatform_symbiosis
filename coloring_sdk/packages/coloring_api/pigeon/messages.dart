@@ -42,12 +42,15 @@ class ColoringSdkConfiguration {
 
   final ColoringSdkTheme theme;
 
+  final ColoringSdkFeatureToggle featureToggle;
+
   ColoringSdkConfiguration({
     required this.colorPresets,
     required this.initialColor,
     required this.localizations,
     required this.image,
     required this.theme,
+    required this.featureToggle,
     this.session,
   });
 }
@@ -105,4 +108,35 @@ class ColoringSdkButtonTheme {
     required this.background,
     required this.foreground,
   });
+}
+
+class ColoringSdkFeatureToggle {
+  final bool isColorPickerEnabled;
+  final bool isScaleEnabled;
+  final bool isPanEnabled;
+  final List<ColoringSdkTool> enabledTools;
+  final List<ColoringSdkAction> enabledActions;
+
+  ColoringSdkFeatureToggle({
+    required this.isColorPickerEnabled,
+    required this.enabledTools,
+    required this.isScaleEnabled,
+    required this.isPanEnabled,
+    required this.enabledActions,
+  });
+}
+
+enum ColoringSdkTool {
+  straightLine,
+  rectangle,
+  circle,
+  eraser,
+}
+
+enum ColoringSdkAction {
+  strokeWidth,
+  undo,
+  redo,
+  rotate,
+  clear,
 }

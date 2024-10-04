@@ -9,6 +9,7 @@ import 'package:coloring_sdk/util/string_x.dart';
 import 'package:coloring_sdk/widget/aspect_listenable_builder.dart';
 import 'package:coloring_sdk/widget/color_picker.dart';
 import 'package:coloring_sdk/widget/coloring_sdk_initializer.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -69,6 +70,7 @@ class ColoringApp extends StatelessWidget {
           onSurface: sdkTheme.onSurface.toColor(),
           surfaceContainer: sdkTheme.surfaceContainer.toColor(),
           secondary: sdkTheme.secondary.toColor(),
+          tertiary: configuration.initialColor.toColor(),
         ),
         floatingActionButtonTheme: FloatingActionButtonThemeData(
           backgroundColor: sdkTheme.buttonTheme.background.toColor(),
@@ -140,6 +142,7 @@ class _ColoringScreenState extends State<ColoringScreen> {
   @override
   Widget build(BuildContext context) {
     final localization = ColoringSdkLocalizationsDelegate.of(context);
+    final featureToggle = widget.configuration.featureToggle;
     final theme = Theme.of(context);
     return PopScope(
       canPop: false,
@@ -157,7 +160,7 @@ class _ColoringScreenState extends State<ColoringScreen> {
               Text(
                 localization.screenTitle,
                 style: theme.textTheme.titleLarge?.copyWith(
-                  color: theme.colorScheme.secondary,
+                  color: theme.colorScheme.tertiary,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -166,6 +169,10 @@ class _ColoringScreenState extends State<ColoringScreen> {
                 height: 550,
                 width: MediaQuery.sizeOf(context).width,
                 child: DrawingBoard(
+                  boardScaleEnabled: featureToggle.isScaleEnabled,
+                  boardPanEnabled: featureToggle.isPanEnabled,
+                  defaultToolsBuilder: _toolsBuilder,
+                  defaultActionsBuilder: _actionsBuilder,
                   image: widget.image,
                   showDefaultActions: true,
                   showDefaultTools: true,
@@ -193,25 +200,27 @@ class _ColoringScreenState extends State<ColoringScreen> {
               tooltip: localization.submitTooltip,
               child: const Icon(Icons.check),
             ),
-            const SizedBox(width: 10),
-            FloatingActionButton(
-              tooltip: localization.pickColorTooltip,
-              onPressed: _pickColor,
-              child: AspectListenableBuilder(
-                listenable: _drawingController.drawConfig,
-                aspect: (listenable) => listenable.value.color,
-                buildWhen: (previous, current) => previous != current,
-                builder: (context, value, child) => DecoratedBox(
-                  decoration: BoxDecoration(
-                    color: value,
-                    shape: BoxShape.circle,
+            if (featureToggle.isColorPickerEnabled) ...[
+              const SizedBox(width: 10),
+              FloatingActionButton(
+                tooltip: localization.pickColorTooltip,
+                onPressed: _pickColor,
+                child: AspectListenableBuilder(
+                  listenable: _drawingController.drawConfig,
+                  aspect: (listenable) => listenable.value.color,
+                  buildWhen: (previous, current) => previous != current,
+                  builder: (context, value, child) => DecoratedBox(
+                    decoration: BoxDecoration(
+                      color: value,
+                      shape: BoxShape.circle,
+                    ),
+                    child: LayoutBuilder(
+                        builder: (_, constraints) => SizedBox.square(
+                            dimension: constraints.maxWidth / 2)),
                   ),
-                  child: LayoutBuilder(
-                      builder: (_, constraints) =>
-                          SizedBox.square(dimension: constraints.maxWidth / 2)),
                 ),
               ),
-            ),
+            ],
           ],
         ),
       ),
@@ -272,5 +281,83 @@ class _ColoringScreenState extends State<ColoringScreen> {
     if (color == null) return;
 
     _drawingController.setStyle(color: color);
+  }
+
+  List<DefToolItem> _toolsBuilder(Type currType, DrawingController controller) {
+    return [
+      DefToolItem(
+          isActive: currType == SimpleLine,
+          icon: Icons.edit,
+          onTap: () => controller.setPaintContent(SimpleLine())),
+      ...widget.configuration.featureToggle.enabledTools
+          .toSet()
+          .map((e) => switch (e) {
+                ColoringSdkTool.straightLine => DefToolItem(
+                    isActive: currType == StraightLine,
+                    icon: Icons.show_chart,
+                    onTap: () => controller.setPaintContent(StraightLine()),
+                  ),
+                ColoringSdkTool.rectangle => DefToolItem(
+                    isActive: currType == Rectangle,
+                    icon: CupertinoIcons.stop,
+                    onTap: () => controller.setPaintContent(Rectangle()),
+                  ),
+                ColoringSdkTool.circle => DefToolItem(
+                    isActive: currType == Circle,
+                    icon: CupertinoIcons.circle,
+                    onTap: () => controller.setPaintContent(Circle()),
+                  ),
+                ColoringSdkTool.eraser => DefToolItem(
+                    isActive: currType == Eraser,
+                    icon: CupertinoIcons.bandage,
+                    onTap: () => controller.setPaintContent(Eraser()),
+                  ),
+              })
+    ];
+  }
+
+  List<Widget> _actionsBuilder(BuildContext context, DrawConfig config) {
+    final theme = Theme.of(context);
+
+    return widget.configuration.featureToggle.enabledActions
+        .toSet()
+        .map((e) => switch (e) {
+              ColoringSdkAction.strokeWidth => SizedBox(
+                  height: 24,
+                  width: 160,
+                  child: Slider(
+                    thumbColor: theme.colorScheme.onSurface,
+                    activeColor: theme.colorScheme.secondary,
+                    value: config.strokeWidth,
+                    max: 50,
+                    min: 1,
+                    onChanged: (double v) =>
+                        _drawingController.setStyle(strokeWidth: v),
+                  ),
+                ),
+              ColoringSdkAction.undo => IconButton(
+                  icon: Icon(
+                    CupertinoIcons.arrow_turn_up_left,
+                    color: _drawingController.canUndo() ? null : Colors.grey,
+                  ),
+                  onPressed: () => _drawingController.undo(),
+                ),
+              ColoringSdkAction.redo => IconButton(
+                  icon: Icon(
+                    CupertinoIcons.arrow_turn_up_right,
+                    color: _drawingController.canRedo() ? null : Colors.grey,
+                  ),
+                  onPressed: () => _drawingController.redo(),
+                ),
+              ColoringSdkAction.rotate => IconButton(
+                  icon: const Icon(CupertinoIcons.rotate_right),
+                  onPressed: () => _drawingController.turn(),
+                ),
+              ColoringSdkAction.clear => IconButton(
+                  icon: const Icon(CupertinoIcons.trash),
+                  onPressed: () => _drawingController.clear(),
+                ),
+            })
+        .toList();
   }
 }

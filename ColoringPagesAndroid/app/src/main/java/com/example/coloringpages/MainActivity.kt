@@ -44,10 +44,13 @@ import coil.compose.AsyncImage
 import com.example.coloringapi.coloring_api.ColoringSdk
 import com.example.coloringpages.ui.theme.ColoringPagesTheme
 import com.example.coloringsdk.api.ColoringHostApi
+import com.example.coloringsdk.api.ColoringSdkAction
 import com.example.coloringsdk.api.ColoringSdkButtonTheme
 import com.example.coloringsdk.api.ColoringSdkConfiguration
+import com.example.coloringsdk.api.ColoringSdkFeatureToggle
 import com.example.coloringsdk.api.ColoringSdkLocalizations
 import com.example.coloringsdk.api.ColoringSdkTheme
+import com.example.coloringsdk.api.ColoringSdkTool
 import java.io.File
 import java.util.HashMap
 
@@ -167,7 +170,14 @@ class MainActivity : ComponentActivity() {
                                 pickColorTooltip = "Pick your very own color!",
                                 colorPickerTitle = "Pick your color!",
                                 colorPickerPresetsTitle = "Available color presets",
-                                screenTitle = "Color this one!",
+                                screenTitle = when (assetName) {
+                                    attackOnTitan -> "Eren Yeager"
+                                    chadShrek -> "Shrek"
+                                    hellBoy -> "Hellboy"
+                                    spawn -> "Spawn"
+                                    spiderMan -> "Spider-man"
+                                    else -> "Color this one!"
+                                },
                             ),
                             session = sessions[assetName],
                             theme = ColoringSdkTheme(
@@ -179,6 +189,13 @@ class MainActivity : ComponentActivity() {
                                     background = "#333030",
                                     foreground = "#cfcccc",
                                 )
+                            ),
+                            featureToggle = ColoringSdkFeatureToggle(
+                                isPanEnabled = true,
+                                isScaleEnabled = true,
+                                isColorPickerEnabled = true,
+                                enabledTools = ColoringSdkTool.entries,
+                                enabledActions = ColoringSdkAction.entries,
                             )
                         ),
                     )

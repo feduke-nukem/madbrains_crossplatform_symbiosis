@@ -25,6 +25,21 @@ List<Object?> wrapResponse({Object? result, PlatformException? error, bool empty
   return <Object?>[error.code, error.message, error.details];
 }
 
+enum ColoringSdkTool {
+  straightLine,
+  rectangle,
+  circle,
+  eraser,
+}
+
+enum ColoringSdkAction {
+  strokeWidth,
+  undo,
+  redo,
+  rotate,
+  clear,
+}
+
 class ColoringSdkConfiguration {
   ColoringSdkConfiguration({
     required this.image,
@@ -33,6 +48,7 @@ class ColoringSdkConfiguration {
     required this.colorPresets,
     required this.localizations,
     required this.theme,
+    required this.featureToggle,
   });
 
   Uint8List image;
@@ -54,6 +70,8 @@ class ColoringSdkConfiguration {
 
   ColoringSdkTheme theme;
 
+  ColoringSdkFeatureToggle featureToggle;
+
   Object encode() {
     return <Object?>[
       image,
@@ -62,6 +80,7 @@ class ColoringSdkConfiguration {
       colorPresets,
       localizations,
       theme,
+      featureToggle,
     ];
   }
 
@@ -74,6 +93,7 @@ class ColoringSdkConfiguration {
       colorPresets: (result[3] as List<Object?>?)!.cast<String>(),
       localizations: result[4]! as ColoringSdkLocalizations,
       theme: result[5]! as ColoringSdkTheme,
+      featureToggle: result[6]! as ColoringSdkFeatureToggle,
     );
   }
 }
@@ -197,6 +217,47 @@ class ColoringSdkButtonTheme {
   }
 }
 
+class ColoringSdkFeatureToggle {
+  ColoringSdkFeatureToggle({
+    required this.isColorPickerEnabled,
+    required this.isScaleEnabled,
+    required this.isPanEnabled,
+    required this.enabledTools,
+    required this.enabledActions,
+  });
+
+  bool isColorPickerEnabled;
+
+  bool isScaleEnabled;
+
+  bool isPanEnabled;
+
+  List<ColoringSdkTool> enabledTools;
+
+  List<ColoringSdkAction> enabledActions;
+
+  Object encode() {
+    return <Object?>[
+      isColorPickerEnabled,
+      isScaleEnabled,
+      isPanEnabled,
+      enabledTools,
+      enabledActions,
+    ];
+  }
+
+  static ColoringSdkFeatureToggle decode(Object result) {
+    result as List<Object?>;
+    return ColoringSdkFeatureToggle(
+      isColorPickerEnabled: result[0]! as bool,
+      isScaleEnabled: result[1]! as bool,
+      isPanEnabled: result[2]! as bool,
+      enabledTools: (result[3] as List<Object?>?)!.cast<ColoringSdkTool>(),
+      enabledActions: (result[4] as List<Object?>?)!.cast<ColoringSdkAction>(),
+    );
+  }
+}
+
 
 class _PigeonCodec extends StandardMessageCodec {
   const _PigeonCodec();
@@ -205,17 +266,26 @@ class _PigeonCodec extends StandardMessageCodec {
     if (value is int) {
       buffer.putUint8(4);
       buffer.putInt64(value);
-    }    else if (value is ColoringSdkConfiguration) {
+    }    else if (value is ColoringSdkTool) {
       buffer.putUint8(129);
-      writeValue(buffer, value.encode());
-    }    else if (value is ColoringSdkLocalizations) {
+      writeValue(buffer, value.index);
+    }    else if (value is ColoringSdkAction) {
       buffer.putUint8(130);
-      writeValue(buffer, value.encode());
-    }    else if (value is ColoringSdkTheme) {
+      writeValue(buffer, value.index);
+    }    else if (value is ColoringSdkConfiguration) {
       buffer.putUint8(131);
       writeValue(buffer, value.encode());
-    }    else if (value is ColoringSdkButtonTheme) {
+    }    else if (value is ColoringSdkLocalizations) {
       buffer.putUint8(132);
+      writeValue(buffer, value.encode());
+    }    else if (value is ColoringSdkTheme) {
+      buffer.putUint8(133);
+      writeValue(buffer, value.encode());
+    }    else if (value is ColoringSdkButtonTheme) {
+      buffer.putUint8(134);
+      writeValue(buffer, value.encode());
+    }    else if (value is ColoringSdkFeatureToggle) {
+      buffer.putUint8(135);
       writeValue(buffer, value.encode());
     } else {
       super.writeValue(buffer, value);
@@ -226,13 +296,21 @@ class _PigeonCodec extends StandardMessageCodec {
   Object? readValueOfType(int type, ReadBuffer buffer) {
     switch (type) {
       case 129: 
-        return ColoringSdkConfiguration.decode(readValue(buffer)!);
+        final int? value = readValue(buffer) as int?;
+        return value == null ? null : ColoringSdkTool.values[value];
       case 130: 
-        return ColoringSdkLocalizations.decode(readValue(buffer)!);
+        final int? value = readValue(buffer) as int?;
+        return value == null ? null : ColoringSdkAction.values[value];
       case 131: 
-        return ColoringSdkTheme.decode(readValue(buffer)!);
+        return ColoringSdkConfiguration.decode(readValue(buffer)!);
       case 132: 
+        return ColoringSdkLocalizations.decode(readValue(buffer)!);
+      case 133: 
+        return ColoringSdkTheme.decode(readValue(buffer)!);
+      case 134: 
         return ColoringSdkButtonTheme.decode(readValue(buffer)!);
+      case 135: 
+        return ColoringSdkFeatureToggle.decode(readValue(buffer)!);
       default:
         return super.readValueOfType(type, buffer);
     }
