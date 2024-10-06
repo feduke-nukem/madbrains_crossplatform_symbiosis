@@ -28,7 +28,7 @@ class _ColoringSdkInitializerState extends State<ColoringSdkInitializer> {
 
     FlutterColoringApi.setUp(
       _FlutterColoringApiHandler(
-        onConfigurationProvidedCallback: (configuration) async {
+        onConfigurationProvided: (configuration) async {
           final imageBytes = configuration.image;
           final image = await decodeImageFromList(imageBytes);
 
@@ -53,13 +53,13 @@ class _ColoringSdkInitializerState extends State<ColoringSdkInitializer> {
 
 class _FlutterColoringApiHandler extends FlutterColoringApi {
   final void Function(ColoringSdkConfiguration configuration)
-      onConfigurationProvidedCallback;
+      onConfigurationProvided;
 
   _FlutterColoringApiHandler({
-    required this.onConfigurationProvidedCallback,
+    required this.onConfigurationProvided,
   });
 
   @override
-  void onConfigurationProvided(ColoringSdkConfiguration configuration) =>
-      onConfigurationProvidedCallback(configuration);
+  void provideConfiguration(ColoringSdkConfiguration configuration) =>
+      onConfigurationProvided(configuration);
 }

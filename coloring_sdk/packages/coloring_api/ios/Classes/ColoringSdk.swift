@@ -20,7 +20,7 @@ public class ColoringSdk {
         }
         let engine = createFlutterEngine()
         ColoringHostApiSetup.setUp(binaryMessenger: engine.binaryMessenger, api: hostApiHandler)
-        FlutterColoringApi(binaryMessenger: engine.binaryMessenger).onConfigurationProvided(configuration: configuration) { _ in }
+        FlutterColoringApi(binaryMessenger: engine.binaryMessenger).provideConfiguration(configuration: configuration) { _ in }
         let controller = FlutterViewController(engine: engine, nibName: nil, bundle: nil)
 
         if needRegisterPlugins {

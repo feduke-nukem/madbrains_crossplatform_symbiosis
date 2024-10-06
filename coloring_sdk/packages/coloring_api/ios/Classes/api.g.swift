@@ -17,7 +17,7 @@ public final class PigeonError: Error {
     let message: String?
     let details: Any?
 
-    init(code: String, message: String?, details: Any?) {
+    public init(code: String, message: String?, details: Any?) {
         self.code = code
         self.message = message
         self.details = details
@@ -392,7 +392,7 @@ class apiPigeonCodec: FlutterStandardMessageCodec, @unchecked Sendable {
 
 /// Generated protocol from Pigeon that represents Flutter messages that can be called from Swift.
 protocol FlutterColoringApiProtocol {
-    func onConfigurationProvided(configuration configurationArg: ColoringSdkConfiguration, completion: @escaping (Result<Void, PigeonError>) -> Void)
+    func provideConfiguration(configuration configurationArg: ColoringSdkConfiguration, completion: @escaping (Result<Void, PigeonError>) -> Void)
 }
 
 public class FlutterColoringApi: FlutterColoringApiProtocol {
@@ -407,8 +407,8 @@ public class FlutterColoringApi: FlutterColoringApiProtocol {
         return apiPigeonCodec.shared
     }
 
-    public func onConfigurationProvided(configuration configurationArg: ColoringSdkConfiguration, completion: @escaping (Result<Void, PigeonError>) -> Void) {
-        let channelName = "dev.flutter.pigeon.coloring_api.FlutterColoringApi.onConfigurationProvided\(messageChannelSuffix)"
+    func provideConfiguration(configuration configurationArg: ColoringSdkConfiguration, completion: @escaping (Result<Void, PigeonError>) -> Void) {
+        let channelName = "dev.flutter.pigeon.coloring_api.FlutterColoringApi.provideConfiguration\(messageChannelSuffix)"
         let channel = FlutterBasicMessageChannel(name: channelName, binaryMessenger: binaryMessenger, codec: codec)
         channel.sendMessage([configurationArg] as [Any?]) { response in
             guard let listResponse = response as? [Any?] else {

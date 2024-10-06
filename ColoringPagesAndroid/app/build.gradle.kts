@@ -6,10 +6,10 @@ plugins {
 android {
     namespace = "com.example.coloringpages"
     compileSdk = 35
-
+    // ..
     defaultConfig {
+        //...
         ndk {
-            // Filter for architectures supported by Flutter
             abiFilters += listOf("armeabi-v7a", "arm64-v8a", "x86_64")
         }
         applicationId = "com.example.coloringpages"

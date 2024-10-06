@@ -322,10 +322,10 @@ class FlutterColoringApi(private val binaryMessenger: BinaryMessenger, private v
       apiPigeonCodec()
     }
   }
-  fun onConfigurationProvided(configurationArg: ColoringSdkConfiguration, callback: (Result<Unit>) -> Unit)
+  fun provideConfiguration(configurationArg: ColoringSdkConfiguration, callback: (Result<Unit>) -> Unit)
 {
     val separatedMessageChannelSuffix = if (messageChannelSuffix.isNotEmpty()) ".$messageChannelSuffix" else ""
-    val channelName = "dev.flutter.pigeon.coloring_api.FlutterColoringApi.onConfigurationProvided$separatedMessageChannelSuffix"
+    val channelName = "dev.flutter.pigeon.coloring_api.FlutterColoringApi.provideConfiguration$separatedMessageChannelSuffix"
     val channel = BasicMessageChannel<Any?>(binaryMessenger, channelName, codec)
     channel.send(listOf(configurationArg)) {
       if (it is List<*>) {

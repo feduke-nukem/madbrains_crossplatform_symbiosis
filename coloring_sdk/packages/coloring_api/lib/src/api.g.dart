@@ -320,26 +320,26 @@ class _PigeonCodec extends StandardMessageCodec {
 abstract class FlutterColoringApi {
   static const MessageCodec<Object?> pigeonChannelCodec = _PigeonCodec();
 
-  void onConfigurationProvided(ColoringSdkConfiguration configuration);
+  void provideConfiguration(ColoringSdkConfiguration configuration);
 
   static void setUp(FlutterColoringApi? api, {BinaryMessenger? binaryMessenger, String messageChannelSuffix = '',}) {
     messageChannelSuffix = messageChannelSuffix.isNotEmpty ? '.$messageChannelSuffix' : '';
     {
       final BasicMessageChannel<Object?> pigeonVar_channel = BasicMessageChannel<Object?>(
-          'dev.flutter.pigeon.coloring_api.FlutterColoringApi.onConfigurationProvided$messageChannelSuffix', pigeonChannelCodec,
+          'dev.flutter.pigeon.coloring_api.FlutterColoringApi.provideConfiguration$messageChannelSuffix', pigeonChannelCodec,
           binaryMessenger: binaryMessenger);
       if (api == null) {
         pigeonVar_channel.setMessageHandler(null);
       } else {
         pigeonVar_channel.setMessageHandler((Object? message) async {
           assert(message != null,
-          'Argument for dev.flutter.pigeon.coloring_api.FlutterColoringApi.onConfigurationProvided was null.');
+          'Argument for dev.flutter.pigeon.coloring_api.FlutterColoringApi.provideConfiguration was null.');
           final List<Object?> args = (message as List<Object?>?)!;
           final ColoringSdkConfiguration? arg_configuration = (args[0] as ColoringSdkConfiguration?);
           assert(arg_configuration != null,
-              'Argument for dev.flutter.pigeon.coloring_api.FlutterColoringApi.onConfigurationProvided was null, expected non-null ColoringSdkConfiguration.');
+              'Argument for dev.flutter.pigeon.coloring_api.FlutterColoringApi.provideConfiguration was null, expected non-null ColoringSdkConfiguration.');
           try {
-            api.onConfigurationProvided(arg_configuration!);
+            api.provideConfiguration(arg_configuration!);
             return wrapResponse(empty: true);
           } on PlatformException catch (e) {
             return wrapResponse(error: e);

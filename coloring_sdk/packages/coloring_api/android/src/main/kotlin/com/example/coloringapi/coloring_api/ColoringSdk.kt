@@ -27,7 +27,7 @@ object ColoringSdk {
         configuration.validate()
         createEngine(context).let {
             ColoringHostApi.setUp(it.dartExecutor, host)
-            FlutterColoringApi(it.dartExecutor).onConfigurationProvided(configuration) {}
+            FlutterColoringApi(it.dartExecutor).provideConfiguration(configuration) {}
         }
         val intent = FlutterActivity.CachedEngineIntentBuilder(ColoringActivity::class.java, FLUTTER_ENGINE_KEY)
             .backgroundMode(FlutterActivityLaunchConfigs.BackgroundMode.transparent)

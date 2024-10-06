@@ -11,7 +11,7 @@ import 'package:pigeon/pigeon.dart';
 )
 @FlutterApi()
 abstract interface class FlutterColoringApi {
-  void onConfigurationProvided(ColoringSdkConfiguration configuration);
+  void provideConfiguration(ColoringSdkConfiguration configuration);
 }
 
 @HostApi()
