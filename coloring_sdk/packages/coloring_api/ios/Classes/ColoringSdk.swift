@@ -13,7 +13,10 @@ public class ColoringSdk {
 
     var flutterEngine: FlutterEngine?
 
-    public func createViewController(hostApiHandler: ColoringHostApi, configuration: ColoringSdkConfiguration) throws -> UIViewController {
+    public func createViewController(
+        hostApiHandler: ColoringHostApi,
+        configuration: ColoringSdkConfiguration
+    ) throws -> UIViewController {
         let needRegisterPlugins = flutterEngine == nil
         do {
             try configuration.validate()

@@ -13,7 +13,6 @@ import io.flutter.embedding.android.FlutterActivityLaunchConfigs
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.dart.DartExecutor
-import java.lang.reflect.Field
 
 private const val FLUTTER_ENGINE_KEY = "engine"
 
@@ -29,7 +28,8 @@ object ColoringSdk {
             ColoringHostApi.setUp(it.dartExecutor, host)
             FlutterColoringApi(it.dartExecutor).provideConfiguration(configuration) {}
         }
-        val intent = FlutterActivity.CachedEngineIntentBuilder(ColoringActivity::class.java, FLUTTER_ENGINE_KEY)
+        val intent = FlutterActivity
+            .CachedEngineIntentBuilder(ColoringActivity::class.java, FLUTTER_ENGINE_KEY)
             .backgroundMode(FlutterActivityLaunchConfigs.BackgroundMode.transparent)
             .build(context)
             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)

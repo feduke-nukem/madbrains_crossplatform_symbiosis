@@ -26,17 +26,15 @@ Future<void> colorImage(List<String> args) async {
 
   runApp(
     ColoringSdkInitializer(
-      builder: (_, configuration, image) {
-        return ColoringApp(
-          key: ObjectKey(configuration),
+      builder: (_, configuration, image) => ColoringApp(
+        key: ObjectKey(configuration),
+        configuration: configuration,
+        child: ColoringScreen(
+          hostApi: hostApi,
           configuration: configuration,
-          child: ColoringScreen(
-            hostApi: hostApi,
-            configuration: configuration,
-            image: image,
-          ),
-        );
-      },
+          image: image,
+        ),
+      ),
     ),
   );
 }

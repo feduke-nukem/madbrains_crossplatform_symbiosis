@@ -149,7 +149,7 @@ struct ContentView: View {
     func initialColor(imageName: String) -> String {
         switch imageName {
         case attackOnTitan: return "#c97979"
-        case chadShrek: return "8cc979"
+        case chadShrek: return "#8cc979"
         case hellBoy: return "#a30a0a"
         case spawn: return "#000000"
         case spiderMan: return "#ff0000"
